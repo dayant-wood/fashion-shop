@@ -12,7 +12,7 @@ body {
   margin: auto;
 }
 
-img {
+.img {
   width: 100%;
 }
 
@@ -423,7 +423,6 @@ template {
   background-image: url(../img/hero-bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  object-fit: cover;
 }
 
 .hero-container {
@@ -522,7 +521,6 @@ template {
   background-image: url(../img/hero-bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  object-fit: cover;
 }
 
 .hero-container {
@@ -614,5 +612,36 @@ template {
 
 .hero__icon {
   margin-right: 8px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .hero-container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+  .hero-container {
+    max-width: 900px;
+    padding-left: 50px;
+  }
+  .navbar__link {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+  .hero-container {
+    max-width: 700px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
