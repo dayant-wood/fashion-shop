@@ -733,12 +733,13 @@ template {
 
 @media (max-width: 390px) {
   .hero-container {
-    background-position: 55% 50%;
+    padding-top: 0;
+    background-position: 80% 0%;
+    max-width: 100%;
+    min-height: 850px;
     text-align: center;
-    border-radius: 8px;
-    padding-bottom: 330px;
     padding-left: 0;
-    background-image: url("../img/hero_image-small.png");
+    background-image: linear-gradient(to bottom, rgba(220, 219, 217, 0), #dcdbd9), url(../img/hero-bg.png);
   }
   .hero__hachtag {
     text-align: center;
