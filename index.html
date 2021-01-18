@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header header__mobile--fixed">
       <div class="container">
         <div class="header__container">
           <a href="#" class="header__logo">
@@ -22,15 +22,20 @@
           </a>
 
           <nav class="navbar">
-            <a href="#" class="navbar__link">Главная</a>
-            <a href="#" class="navbar__link">Новинки</a>
-            <a href="#" class="navbar__link">Тренды</a>
-            <a href="#" class="navbar__link">Отзывы</a>
-            <a href="#" class="navbar__link">Контакты</a>
-            <a href="#" class="navbar__link">
+            <a href="#" class="navbar__link navbar__link--visible">Главная</a>
+            <a href="#" class="navbar__link navbar__link--visible">Новинки</a>
+            <a href="#" class="navbar__link navbar__link--visible">Тренды</a>
+            <a href="#" class="navbar__link navbar__link--visible">Отзывы</a>
+            <a href="#" class="navbar__link navbar__link--visible">Контакты</a>
+            <a href="#" class="navbar__link navbar__link--visible">
               <button class="navbar__button">Войти</button>
             </a>
           </nav>
+          <button class="menu-button navbar__menu-button">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </button>
         </div>
       </div>
       <!--.container-->
@@ -54,8 +59,8 @@
           >
           <button class="hero__button">Подобрать одежду</button>
           <ul class="hero__list">
-            <li class="hero__item">
-              <div class="hero-icon__wrapper">
+            <li class="hero__item hero__item--1">
+              <div class="hero__icon-wrapper">
                 <img
                   src="img/get-money_icon.svg"
                   alt="ico:get money"
@@ -64,8 +69,8 @@
                 Онлайн оплата
               </div>
             </li>
-            <li class="hero__item">
-              <div class="hero-icon__wrapper">
+            <li class="hero__item hero__item--2">
+              <div class="hero__icon-wrapper">
                 <img
                   src="img/protection_icon.svg"
                   alt="icon:protection"
@@ -74,8 +79,8 @@
                 Гарантия
               </div>
             </li>
-            <li class="hero__item">
-              <div class="hero-icon__wrapper">
+            <li class="hero__item hero__item--3">
+              <div class="hero__icon-wrapper">
                 <img
                   src="img/like_icon.svg"
                   alt="icon:like"
@@ -89,5 +94,7 @@
         <!--.hero__text-->
       </div>
     </section>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
