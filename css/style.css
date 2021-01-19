@@ -41,6 +41,14 @@ img {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "HKGrotesk-Bold";
+  src: url("../fonts/hkgrotesk-bold-web.woff2") format("woff2"), url("../fonts/hkgrotesk-bold-web.woff") format("woff");
+  font-weight: bold;
+  font-style: bold;
+  font-display: swap;
+}
+
 .hidden {
   overflow: hidden;
 }
@@ -622,6 +630,88 @@ template {
   margin-right: 8px;
 }
 
+.collection {
+  padding: 120px 0 120px 0;
+}
+
+.collection__wrapper {
+  display: flex;
+}
+
+.collection__photos {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 57px;
+}
+
+.collection__small-cards--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.collection__photo--1 {
+  width: 320px;
+  height: 490px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.collection__photo--2, .collection__photo--3 {
+  width: 320px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.collection__base-1 {
+  margin-right: 30px;
+}
+
+.collection__content {
+  max-width: 412px;
+}
+
+.collection__title {
+  font-family: 'HKGrotesk-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  color: #183B56;
+  letter-spacing: 0.2px;
+  margin-top: 0;
+}
+
+.collection__text {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #5A7184;
+  max-width: 360px;
+}
+
+.collection__show {
+  display: flex;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #1565D8;
+  margin-top: 32px;
+}
+
+.collection__show-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.collection__icon {
+  margin-left: 20px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -643,6 +733,23 @@ template {
   .navbar__link {
     margin-right: 20px;
   }
+  .collection {
+    padding-top: 77px;
+  }
+  .collection__wrapper {
+    flex-wrap: wrap;
+  }
+  .collection__photos {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+  .collection__title {
+    white-space: nowrap;
+    margin-bottom: 25px;
+  }
+  .collection__text {
+    max-width: 672px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -661,6 +768,24 @@ template {
   }
   .container {
     max-width: 85%;
+  }
+  .navbar {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    top: 94px;
+    bottom: 0;
+  }
+  .navbar--visible {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .navbar__link--visible {
+    margin-bottom: 20px;
   }
   .navbar__menu-button {
     display: flex;
@@ -682,7 +807,7 @@ template {
     height: 2px;
   }
   .hero-container {
-    max-width: 92%;
+    max-width: 95%;
     padding-left: 20px;
     padding-top: 45px;
   }
@@ -704,23 +829,11 @@ template {
   .hero__button {
     margin-bottom: 35px;
   }
-  .navbar {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    top: 94px;
-    bottom: 0;
+  .collection__content {
+    max-width: 100%;
   }
-  .navbar--visible {
-    display: block;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-  }
-  .navbar__link--visible {
-    margin-bottom: 20px;
+  .collection__title {
+    white-space: normal;
   }
 }
 
@@ -729,6 +842,48 @@ template {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+  .collection {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 490px) {
+  .collection__photo--1 {
+    width: 290px;
+    height: 300px;
+  }
+  .collection__photo--2, .collection__photo--3 {
+    width: 138px;
+    height: 97px;
+  }
+  .collection__title {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+  .collection__text {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .collection__photos {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .collection__small-cards {
+    flex-direction: row;
+  }
+  .collection__show {
+    display: none;
+  }
+  .collection__base-1 {
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+  .collection__base-2 {
+    margin-right: 14px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -736,7 +891,7 @@ template {
     padding-top: 0;
     background-position: 80% 0%;
     max-width: 100%;
-    min-height: 850px;
+    min-height: 899px;
     text-align: center;
     padding-left: 0;
     background-image: linear-gradient(to bottom, rgba(220, 219, 217, 0), #dcdbd9), url(../img/hero-bg.png);
@@ -766,7 +921,7 @@ template {
     line-height: 22px;
   }
   .hero__text {
-    transform: translateY(60%);
+    transform: translateY(70%);
     text-align: -webkit-center;
   }
   .hero__item {
