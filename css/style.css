@@ -18,7 +18,7 @@ img {
 }
 
 @font-face {
-  font-family: "HKGrotesk-Regular";
+  font-family: "HKGrotesk";
   src: url("../fonts/hkgrotesk-regular-web.woff2") format("woff2"), url("../fonts/hkgrotesk-regular-web.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -26,31 +26,27 @@ img {
 }
 
 @font-face {
-  font-family: "HKGrotesk-Medium";
-  src: url("../fonts/hkgrotesk-medium-web.woff2") format("woff2"), url("../fonts/hkgrotesk-medium-web.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "HKGrotesk-Light";
+  font-family: "HKGrotesk";
   src: url("../fonts/hkgrotesk-light-web.woff2") format("woff2"), url("../fonts/hkgrotesk-light-web.woff") format("woff");
-  font-weight: normal;
+  font-weight: light;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "HKGrotesk-Bold";
+  font-family: "HKGrotesk";
   src: url("../fonts/hkgrotesk-bold-web.woff2") format("woff2"), url("../fonts/hkgrotesk-bold-web.woff") format("woff");
   font-weight: bold;
-  font-style: bold;
+  font-style: normal;
   font-display: swap;
 }
 
 .hidden {
   overflow: hidden;
+}
+
+.none {
+  display: none;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -403,6 +399,10 @@ template {
   align-items: center;
 }
 
+.header__mobile-menu {
+  display: none;
+}
+
 .navbar {
   background-color: #FFFFFF;
 }
@@ -474,7 +474,7 @@ template {
 }
 
 .hero__title {
-  font-family: "HKGrotesk-Regular", sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 56px;
@@ -488,7 +488,6 @@ template {
 .hero__description {
   display: block;
   max-width: 652px;
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -498,8 +497,7 @@ template {
 }
 
 .hero__button {
-  padding: 15px 40px;
-  font-family: Open Sans;
+  padding: 15px 49px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -519,7 +517,7 @@ template {
 
 .hero__item {
   margin-right: 30px;
-  font-family: "HKGrotesk-Regular", sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -569,7 +567,7 @@ template {
 }
 
 .hero__title {
-  font-family: "HKGrotesk-Regular", sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 56px;
@@ -583,7 +581,6 @@ template {
 .hero__description {
   display: block;
   max-width: 652px;
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -593,8 +590,7 @@ template {
 }
 
 .hero__button {
-  padding: 15px 40px;
-  font-family: Open Sans;
+  padding: 15px 49px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -614,7 +610,7 @@ template {
 
 .hero__item {
   margin-right: 30px;
-  font-family: "HKGrotesk-Regular", sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -632,6 +628,11 @@ template {
 
 .collection {
   padding: 120px 0 120px 0;
+}
+
+.collection-container {
+  max-width: 1140px;
+  margin: auto;
 }
 
 .collection__wrapper {
@@ -673,7 +674,7 @@ template {
 }
 
 .collection__title {
-  font-family: 'HKGrotesk-Bold';
+  font-family: 'HKGrotesk';
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -712,18 +713,162 @@ template {
   margin-left: 20px;
 }
 
+.trending {
+  padding: 22px 0 145px 0;
+}
+
+.trending-container {
+  max-width: 1135px;
+  margin: auto;
+}
+
+.trending__category-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.trending__title {
+  font-family: "HKGrotesk";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  color: #183B56;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.trending__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.trending__list:first-child {
+  color: #183B56;
+  font-weight: bold;
+}
+
+.trending__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  margin-right: 38px;
+}
+
+.trending__item:last-child {
+  margin-right: 0;
+}
+
+.trending__item:first-child {
+  font-weight: bold;
+}
+
+.trending__link {
+  text-decoration: none;
+  color: #5A7184;
+}
+
+.trending__link--new {
+  color: #183B56;
+}
+
+.trending__photo {
+  width: 260px;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.trending__photos-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.trending__photos-item {
+  max-height: 441px;
+  margin-bottom: 50px;
+}
+
+.trending__photos-item--last {
+  width: 260px;
+  height: 350px;
+  background-color: #1565D8;
+  border-radius: 8px;
+}
+
+.trending__photos-title {
+  font-family: "HKGrotesk";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  letter-spacing: 0.2px;
+  color: #183B56;
+}
+
+.trending__price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #5A7184;
+}
+
+.trending__price-wrapper {
+  max-width: 253px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trending__last-logo {
+  margin-bottom: 25px;
+}
+
+.trending__last-item--description {
+  font-family: "HKGrotesk";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}
+
+.trending__photos-item--last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 125px;
+}
+
 @media (max-width: 1200px) {
-  .container {
+  .container, .collection-container, .trending-container {
     max-width: 960px;
   }
   .hero-container {
     max-width: 1200px;
     padding-left: 45px;
   }
+  .trending__photos-wrapper {
+    justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 992px) {
-  .container {
+  .container,
+  .collection-container,
+  .trending-container {
     max-width: 700px;
   }
   .hero-container {
@@ -766,8 +911,17 @@ template {
     right: 0;
     z-index: 150;
   }
+  .header__logo--hidden {
+    display: none;
+  }
   .container {
     max-width: 85%;
+  }
+  .collection {
+    padding-bottom: 48px;
+  }
+  .collection-container {
+    max-width: 92%;
   }
   .navbar {
     display: none;
@@ -776,12 +930,13 @@ template {
     top: 0;
     right: 0;
     top: 94px;
-    bottom: 0;
   }
   .navbar--visible {
+    padding-left: 24px;
     display: block;
     display: flex;
     flex-direction: column;
+    align-items: start;
     overflow: auto;
   }
   .navbar__link--visible {
@@ -800,6 +955,9 @@ template {
     outline: none;
     color: black;
     background-color: #fff;
+  }
+  .navbar__menu-button--hidden {
+    display: none;
   }
   .menu-button__line {
     background-color: #3A4C66;
@@ -834,6 +992,16 @@ template {
   }
   .collection__title {
     white-space: normal;
+  }
+  .trending__category-wrapper {
+    flex-direction: column;
+    margin-bottom: 57px;
+  }
+  .trending__title {
+    margin-bottom: 28px;
+  }
+  .trending__photo {
+    width: 280px;
   }
 }
 
@@ -887,6 +1055,9 @@ template {
 }
 
 @media (max-width: 390px) {
+  .header {
+    padding-top: 18px;
+  }
   .hero-container {
     padding-top: 0;
     background-position: 80% 0%;
@@ -914,6 +1085,7 @@ template {
     line-height: 28px;
     text-align: center;
     max-width: 280px;
+    margin-bottom: 30px;
   }
   .hero__button {
     margin-bottom: 30px;
@@ -927,12 +1099,18 @@ template {
   .hero__item {
     margin-right: 17px;
   }
-  .hero__item--1, .hero__item--2 {
+  .hero__item--first, .hero__item--second {
     margin-bottom: 15px;
   }
   .hero__icon {
     width: 24px;
     height: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .collection-container {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

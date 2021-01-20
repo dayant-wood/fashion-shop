@@ -7,6 +7,9 @@ menuButton.on("click", openMenu);
     $(".navbar").toggleClass('navbar--visible');
     $("body").toggleClass("hidden");
     
+    
+
+    
   };
  
 }); 

@@ -9,8 +9,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="http://fontlibrary.org/face/hk-grotesk"
+      type="text/css"
+    />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="IMG" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -59,7 +65,7 @@
           <a href="#"><button class="hero__button">Подобрать одежду</button></a>
 
           <ul class="hero__list">
-            <li class="hero__item hero__item--1">
+            <li class="hero__item hero__item--first">
               <div class="hero__icon-wrapper">
                 <img
                   src="img/get-money_icon.svg"
@@ -69,7 +75,7 @@
                 Онлайн оплата
               </div>
             </li>
-            <li class="hero__item hero__item--2">
+            <li class="hero__item hero__item--second">
               <div class="hero__icon-wrapper">
                 <img
                   src="img/protection_icon.svg"
@@ -79,7 +85,7 @@
                 Гарантия
               </div>
             </li>
-            <li class="hero__item hero__item--3">
+            <li class="hero__item hero__item--third">
               <div class="hero__icon-wrapper">
                 <img
                   src="img/like_icon.svg"
@@ -94,9 +100,9 @@
         <!--.hero__text-->
       </div>
     </section>
-
+    <!--.hero-->
     <section class="collection">
-      <div class="container">
+      <div class="collection-container">
         <div class="collection__wrapper">
           <div class="collection__photos">
             <div class="collection__base-1">
@@ -145,6 +151,126 @@
         </div>
       </div>
     </section>
+    <!--.collection-->
+
+    <section class="trending">
+      <div class="trending-container">
+        <div class="trending__category-wrapper">
+          <h2 class="trending__title">Тренды</h2>
+          <ul class="trending__list">
+            <li class="trending__item">
+              <a href="#" class="trending__link trending__link--new">Новинки</a>
+            </li>
+            <li class="trending__item">
+              <a href="#" class="trending__link">Лучшее</a>
+            </li>
+            <li class="trending__item">
+              <a href="#" class="trending__link">Скоро</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="trending__photos-wrapper">
+          <div class="trending__photos-item">
+            <img
+              src="img/trending_pict-1.png"
+              alt="trending__photo"
+              class="trending__photo"
+            />
+            <h4 class="trending__photos-title">Minimalist Style</h4>
+            <div class="trending__price-wrapper">
+              <span class="trending__price">$25.7 </span>
+              <img src="img/shopping-card__icon.svg" alt="shopping icon" />
+            </div>
+          </div>
+
+          <div class="trending__photos-item">
+            <img
+              src="img/trending_pict-2.png"
+              alt="trending__photo"
+              class="trending__photo"
+            />
+            <h4 class="trending__photos-title">Luxury Gown</h4>
+            <div class="trending__price-wrapper">
+              <span class="trending__price">$30.6 </span>
+              <img src="img/shopping-card__icon.svg" alt="shopping icon" />
+            </div>
+          </div>
+          <div class="trending__photos-item">
+            <img
+              src="img/trending_pict-3.png"
+              alt="trending__photo"
+              class="trending__photo"
+            />
+            <h4 class="trending__photos-title">Full Coloristy</h4>
+            <div class="trending__price-wrapper">
+              <span class="trending__price">$25.7 </span>
+              <img src="img/shopping-card__icon.svg" alt="shopping icon" />
+            </div>
+          </div>
+          <div class="trending__photos-item">
+            <img
+              src="img/trending_pict-4.png"
+              alt="trending__photo"
+              class="trending__photo"
+            />
+            <h4 class="trending__photos-title">Pinky Winky</h4>
+            <div class="trending__price-wrapper">
+              <span class="trending__price">$109 </span>
+              <img src="img/shopping-card__icon.svg" alt="shopping icon" />
+            </div>
+          </div>
+          <div class="trending__photos-item">
+            <img
+              src="img/trending_pict-6.png"
+              alt="trending__photo"
+              class="trending__photo"
+            />
+            <h4 class="trending__photos-title">Holiday Vibes</h4>
+            <div class="trending__price-wrapper">
+              <span class="trending__price">$51.2</span>
+              <img src="img/shopping-card__icon.svg" alt="shopping icon" />
+            </div>
+          </div>
+          <div class="trending__photos-item">
+            <img
+              src="img/trending_pict-7.png"
+              alt="trending__photo"
+              class="trending__photo"
+            />
+            <h4 class="trending__photos-title">Swaggie Shaggy</h4>
+            <div class="trending__price-wrapper">
+              <span class="trending__price">$81.3</span>
+              <img src="img/shopping-card__icon.svg" alt="shopping icon" />
+            </div>
+          </div>
+          <div class="trending__photos-item">
+            <img
+              src="img/trending_pict-5.png"
+              alt="trending__photo"
+              class="trending__photo"
+            />
+            <h4 class="trending__photos-title">Red Formal</h4>
+            <div class="trending__price-wrapper">
+              <span class="trending__price">$66.8 </span>
+              <img src="img/shopping-card__icon.svg" alt="shopping icon" />
+            </div>
+          </div>
+          <div class="trending__photos-item trending__photos-item--last">
+            <img
+              src="img/plus-icon.svg"
+              alt="icon:plus"
+              class="trending__last-logo"
+            />
+            <span class="trending__last-item--description"
+              >Смотреть <br />
+              больше коллекций</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--.trending-->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
   </body>
