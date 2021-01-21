@@ -32,6 +32,8 @@
     font-size: 18px
     line-height: 25px
     margin-right: 38px
+    cursor: default
+
     &:last-child
       margin-right: 0
     &:first-child
@@ -39,8 +41,9 @@
   &__link
     text-decoration: none
     color: #5A7184
-    &--new
-      color: #183B56
+    cursor: pointer
+    // &--new
+    //   color: #183B56
   &__photo
     width: 260px
     height: 350px
@@ -51,7 +54,9 @@
       display: flex
       justify-content: space-between
       flex-wrap: wrap
-
+      display: none
+      &--active
+        display: flex
     &-item
       max-height: 441px
       margin-bottom: 50px
@@ -68,7 +73,7 @@
       line-height: 32px
       margin-top: 20px
       margin-bottom: 0
-      margin-left: 10px
+      margin-left: 0px
       letter-spacing: 0.2px
       color: #183B56
   &__price
@@ -85,7 +90,6 @@
   &__last
     &-logo
       margin-bottom: 25px
-
     &-item
       &--description
         font-family: "HKGrotesk"
@@ -96,7 +100,7 @@
         text-align: center
         letter-spacing: 0.2px
         color: #FFFFFF
-
+        text-decoration: none
   &__photos-item
     &--last
       display: flex

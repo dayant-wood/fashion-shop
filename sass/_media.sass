@@ -52,16 +52,16 @@
   .container
     max-width: 85%
   .collection
-    padding-bottom: 48px
+    padding-bottom: 43px
     &-container
-      max-width: 92%
+      max-width: 87%
   .navbar
     display: none
     position: fixed
     left: 0
     top: 0
     right: 0
-    top: 94px
+    top: 87px
     &--visible
       padding-left: 24px
       display: block
@@ -69,7 +69,6 @@
       flex-direction: column
       align-items: start
       overflow: auto
-
     &__link
       &--visible
         margin-bottom: 20px
@@ -134,13 +133,51 @@
       justify-content: space-evenly
   .collection
     padding-top: 60px
-
+  .trending
+    &__title
+      font-size: 28px
+      line-height: 36px
+    &__item
+      font-size: 16px
+      line-height: 22px
+      margin-right: 27px
+    &__photos
+      &-item
+        max-height: 234px
+        &--last
+          width: 140px
+          height: 170px
+      &-title
+        font-size: 16px
+        line-height: 20px
+    &__photo
+      width: 140px
+      height: 170px
+    &__price
+      font-size: 14px
+      line-height: 24px
+      margin-right: 9px
+      &-wrapper
+        justify-content: flex-start
+    &__photos
+      &-item--last
+        padding-top: 41px
+    &__last-item
+      &--description
+        font-size: 17px
+        line-height: 20px
+    &__last-logo
+      width: 25px
+      margin-bottom: 16px
+    &__shopping-icon
+      width: 14px
+      height: 32px
 @media (max-width: 490px)
   .collection
-    &__photo--1
+    &__photo--first
       width: 290px
       height: 300px
-    &__photo--2, &__photo--3
+    &__photo--second, &__photo--third
       width: 138px
       height: 97px
     &__title
@@ -159,11 +196,12 @@
       flex-direction: row
     &__show
       display: none
-    &__base-1
+    &__base-first
       margin-right: 0
       margin-bottom: 14px
-    &__base-2
+    &__base-second
       margin-right: 14px
+
 @media (max-width: 390px)
   .header
     padding-top: 18px
@@ -185,6 +223,7 @@
       line-height: 40px
       letter-spacing: 0.2px
       text-align: center
+      margin-top: 23px
     &__description
       font-style: normal
       font-weight: normal
@@ -192,13 +231,13 @@
       line-height: 28px
       text-align: center
       max-width: 280px
-      margin-bottom: 30px
+      margin-bottom: 23px
     &__button
       margin-bottom: 30px
       font-size: 16px
       line-height: 22px
     &__text
-      transform: translateY(70%)
+      transform: translateY(75%)
       text-align: -webkit-center
     &__item
       margin-right: 17px
@@ -209,6 +248,35 @@
       height: 24px
 
 @media (max-width: 320px)
+  .hero
+    &__button
+      margin-bottom: 16px
   .collection
     &-container
       max-width: 100%
+  .trending
+    padding-top: 77px
+    &__category
+      &-wrapper
+        margin-bottom: 36px
+    &__item
+      margin-right: 27px
+    &__photos
+      &-title
+        margin: 0
+        margin-top: 13px
+      &-item
+        margin-bottom: 21px
+    &__shopping-icon
+      width: 14px
+      height: 32px
+    &__photos
+      &-item--last
+        padding-top: 41px
+    &__last-item
+      &--description
+        font-size: 17px
+        line-height: 20px
+    &__last-logo
+      width: 25px
+      margin-bottom: 16px
