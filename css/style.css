@@ -902,7 +902,7 @@ template {
 }
 
 .reviews {
-  padding: 0 0 145px 0;
+  padding: 0 0 70px 0;
 }
 
 .reviews-container {
@@ -945,6 +945,16 @@ template {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+}
+
+.stories {
+  padding: 0px 0 140px 0;
+}
+
+.stories-container {
+  margin: auto;
+  max-width: 1150px;
+  border-top: 1px solid #E5EAF4;
 }
 
 @media (max-width: 1200px) {
@@ -1214,7 +1224,7 @@ template {
     margin-right: 14px;
   }
   .trending-container {
-    max-width: 88%;
+    max-width: 100%;
   }
 }
 
