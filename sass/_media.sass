@@ -12,7 +12,8 @@
 @media (max-width: 992px)
   .container,
   .collection-container,
-  .trending-container
+  .trending-container,
+  .reviews-container
     max-width: 700px
   .hero
     &-container
@@ -55,6 +56,10 @@
     padding-bottom: 43px
     &-container
       max-width: 87%
+  .reviews
+    &-container
+      max-width: 87%
+
   .navbar
     display: none
     position: fixed
@@ -118,6 +123,8 @@
     &__title
       white-space: normal
   .trending
+    padding-top: 19px
+    padding-bottom: 39px
     &__category-wrapper
       flex-direction: column
       margin-bottom: 57px
@@ -125,6 +132,13 @@
       margin-bottom: 28px
     &__photo
       width: 280px
+  .reviews-slider
+    &__item
+      padding-bottom: 40px
+    &__text
+      max-width: 604px
+      max-height: 205px
+      margin-bottom: 33px
 
 @media (max-width: 576px)
   .hero
@@ -134,6 +148,8 @@
   .collection
     padding-top: 60px
   .trending
+    &-container
+      max-width: 88%
     &__title
       font-size: 28px
       line-height: 36px
@@ -172,6 +188,7 @@
     &__shopping-icon
       width: 14px
       height: 32px
+
 @media (max-width: 490px)
   .collection
     &__photo--first
@@ -201,7 +218,9 @@
       margin-bottom: 14px
     &__base-second
       margin-right: 14px
-
+  .trending
+    &-container
+      max-width: 95%%
 @media (max-width: 390px)
   .header
     padding-top: 18px
@@ -246,7 +265,20 @@
     &__icon
       width: 24px
       height: 24px
-
+  .reviews
+    &-slider
+      &__image
+        width: 70px
+      &__text
+        margin-top: 19px
+        font-size: 18px
+        line-height: 36px
+        max-width: 264px
+        max-height: 357px
+        margin-bottom: 30px
+      &__author
+        text-align: center
+        max-width: 145px
 @media (max-width: 320px)
   .hero
     &__button
