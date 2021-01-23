@@ -25,14 +25,14 @@ var colorItem = $(".trending__link");
   });
 
 
-var mySwiper = new Swiper('.reviews-container', {
+var reviewsSwiper = new Swiper('.reviews-container', {
   // Optional parameters
   
   loop: true,
 
-  autoplay: {
-    delay: 7000,
-  },
+  // autoplay: {
+  //   delay: 7000,
+  // },
 
   disableOnInteraction: true,
   
@@ -56,4 +56,52 @@ $(".reviews-container").hover(
     this.swiper.autoplay.start();
   }
 );
+
+
+var storiesSwiper = new Swiper('.stories-slider', {
+  // Optional parameters
+  
+  loop: true,  
+
+  slidesPerView: 2,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  
+  
+});
+
+$('#slide').click(storiesSwiper, function(event){
+  event.preventDefault();
+    storiesSwiper.slideToLoop(2,1000,false);
+});
+
+  $(".form").each(function() {
+    $(this).validate({
+    errorClass: "invalid",
+    messages: {
+    name: {
+      required: "Please, specify your name",
+      minlength: "Name should contain minimum 3 characters",
+    },
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com",
+    },
+    phone: {
+      required: "Please, specify your phone number",
+      minlength: "Please, enter the full number",
+    },
+    sub_mail: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com",
+    }, 
+  },
+      
+});
+});
+
+
 }); 

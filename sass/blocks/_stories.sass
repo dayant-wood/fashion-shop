@@ -1,10 +1,83 @@
 .stories
-  padding: 0px 0 140px 0
+  padding: 110px 0 140px 0
   &-container
     margin: auto
     max-width: 1150px
-    border-top: 1px solid #E5EAF4
-  &__wrapper
+  &-wrapper
+    display: flex
+    justify-content: space-between
   &__left-side
     display: flex
     flex-direction: column
+    justify-content: center
+  &__sticker
+    display: block
+    max-width: 102px
+    padding: 6px 16px
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 20px
+    color: #36B37E
+    background: rgba(54, 179, 126, 0.1)
+    border-radius: 2000px
+    text-transform: uppercase
+  &__title
+    font-family: "HKGrotesk"
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+    color: #183B56
+    max-width: 337px
+    margin-top: 28px
+  &__text
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 36px
+    color: #5A7184
+    max-width: 392px
+    margin-bottom: 42px
+  &__image
+    width: 312px
+    height: 317px
+    object-fit: cover
+    border-radius: 8px 8px 0px 0px
+  &__right-side
+    position: relative
+    display: flex
+    justify-content: space-between
+    max-width: 662px
+  &-slider
+    &__item
+      min-height: 475px
+    &__text-wrapper
+      display: flex
+      flex-direction: column
+      background-color: #FAFDFF
+      min-height: 178px
+      max-width: 312px
+      padding: 20px
+      position: absolute
+      z-index: 25
+      transform: translate(13px, -24px)
+
+    &__description
+      font-family: "HKGrotesk"
+      font-style: normal
+      font-weight: 800
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.2px
+      color: #183B56
+      margin-bottom: 12px
+
+    &__link
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      text-decoration: none
+      color: #1565D8

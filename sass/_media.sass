@@ -1,5 +1,9 @@
 @media (max-width: 1200px)
-  .container, .collection-container, .trending-container
+  .container,
+  .collection-container,
+  .trending-container,
+  .stories-container,
+  .newsletter-container,
     max-width: 960px
   .hero
     &-container
@@ -13,7 +17,9 @@
   .container,
   .collection-container,
   .trending-container,
-  .reviews-container
+  .reviews-container,
+  .stories-container,
+  .newsletter-container
     max-width: 700px
   .hero
     &-container
@@ -34,7 +40,12 @@
       margin-bottom: 25px
     &__text
       max-width: 672px
-
+  .newsletter
+    &-container
+      flex-direction: column
+    &__text
+      margin-bottom: 56px
+      text-align: center
 @media (max-width: 768px)
   body
     padding-top: 94px
@@ -139,6 +150,9 @@
       max-width: 604px
       max-height: 205px
       margin-bottom: 33px
+  .newsletter
+    &__title
+      margin-bottom: 14px
 
 @media (max-width: 576px)
   .hero
@@ -188,7 +202,12 @@
     &__shopping-icon
       width: 14px
       height: 32px
-
+  .newsletter
+    &-container
+      max-width: 88%
+    &__form
+      width: 100%
+      max-width: none
 @media (max-width: 490px)
   .collection
     &__photo--first
@@ -279,6 +298,22 @@
       &__author
         text-align: center
         max-width: 145px
+  .newsletter
+    &__title
+      font-size: 28px
+      line-height: 36px
+      margin-bottom: 24px
+    &__text
+      font-size: 16px
+      line-height: 28px
+    &__input
+      padding-right: 20px
+    &__button
+      display: block
+      position: relative
+      margin-top: 70px
+      margin-left: 3px
+      width: 100%
 @media (max-width: 320px)
   .hero
     &__button
@@ -303,8 +338,11 @@
       width: 14px
       height: 32px
     &__photos
-      &-item--last
-        padding-top: 41px
+      &-item
+        &--last
+          padding-top: 41px
+        &--empty
+          flex-basis: 44%
     &__last-item
       &--description
         font-size: 17px
