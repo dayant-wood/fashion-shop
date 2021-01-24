@@ -78,22 +78,12 @@ $('#slide').click(storiesSwiper, function(event){
     storiesSwiper.slideToLoop(2,1000,false);
 });
 
-  $(".form").each(function() {
+
+$(".form").each(function() {
     $(this).validate({
     errorClass: "invalid",
     messages: {
-    name: {
-      required: "Please, specify your name",
-      minlength: "Name should contain minimum 3 characters",
-    },
-    email: {
-      required: "We need your email address to contact you",
-      email: "Your email address must be in the format of name@domain.com",
-    },
-    phone: {
-      required: "Please, specify your phone number",
-      minlength: "Please, enter the full number",
-    },
+
     sub_mail: {
       required: "We need your email address to contact you",
       email: "Your email address must be in the format of name@domain.com",
@@ -102,6 +92,7 @@ $('#slide').click(storiesSwiper, function(event){
       
 });
 });
+
 
 
 }); 

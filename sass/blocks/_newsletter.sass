@@ -1,9 +1,28 @@
 .newsletter
+  position: relative
   padding: 51px 0 100px 0
   background-color: #1565D8
+  &:before
+    content: ''
+    position: absolute
+    background: url(../img/oval-1.svg) no-repeat left top
+    background-size: contain
+    height: 100%
+    width: 100%
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      background: url(../img/oval-2.svg) no-repeat right top
+      background-size: contain
+      height: 100%
+      width: 100%
   &-container
     max-width: 1150px
     margin: auto
+
+  &-wrapper
+    max-width: 1083px
     display: flex
     justify-content: space-between
     align-items: center
@@ -43,7 +62,6 @@
     border-radius: 8px
     border: none
     outline: none
-    visibility: visible
   &__icon
     width: 16px
     position: absolute
@@ -66,3 +84,4 @@
     border: none
     cursor: pointer
     white-space: nowrap
+    overflow: visible

@@ -4,6 +4,8 @@
   .trending-container,
   .stories-container,
   .newsletter-container,
+  .footer-container,
+  .greetings-container
     max-width: 960px
   .hero
     &-container
@@ -18,9 +20,13 @@
   .collection-container,
   .trending-container,
   .reviews-container,
-  .stories-container,
-  .newsletter-container
+  .greetings-container
+  .newsletter-container,
     max-width: 700px
+  .footer-container
+    max-width: 700px
+  .stories-container
+    max-width: 95%
   .hero
     &-container
       max-width: 900px
@@ -41,11 +47,16 @@
     &__text
       max-width: 672px
   .newsletter
-    &-container
+    &-wrapper
       flex-direction: column
     &__text
       margin-bottom: 56px
       text-align: center
+  .footer
+    &-menu
+      flex-wrap: wrap
+    &__nav
+      grid-template-columns: repeat(2, 165px)
 @media (max-width: 768px)
   body
     padding-top: 94px
@@ -70,6 +81,11 @@
   .reviews
     &-container
       max-width: 87%
+  .footer
+    &-container
+      max-width: 87%
+  .greetings-container
+    max-width: 87%
 
   .navbar
     display: none
@@ -153,7 +169,14 @@
   .newsletter
     &__title
       margin-bottom: 14px
-
+  .footer
+    padding-top: 68px
+    &__nav
+      grid-template-columns: repeat(2, 165px)
+@media (max-width: 716px)
+  .footer
+    &__nav
+      margin-top: 30px
 @media (max-width: 576px)
   .hero
     &__list
@@ -314,6 +337,17 @@
       margin-top: 70px
       margin-left: 3px
       width: 100%
+  .footer
+    padding-top: 48px
+    &__nav
+      grid-template-columns: repeat(1, 165px)
+    &__info
+      order: 1
+      margin-top: 48px
+    &__menu-group--links
+      align-items: center
+    &__text
+      text-align: center
 @media (max-width: 320px)
   .hero
     &__button
@@ -350,3 +384,5 @@
     &__last-logo
       width: 25px
       margin-bottom: 16px
+  .footer
+    padding-left: 15px
