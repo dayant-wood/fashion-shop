@@ -1,84 +1,121 @@
 .stories
-  padding: 110px 0 140px 0
-  &-container
-    margin: auto
-    max-width: 1150px
+  margin-bottom: 116px
   &-wrapper
     display: flex
     justify-content: space-between
-  &__left-side
-    display: flex
-    flex-direction: column
-    justify-content: center
-  &__sticker
-    display: block
-    max-width: 102px
-    padding: 6px 16px
-    font-style: normal
+    border-top: 1px solid #E5EAF4
+    padding-top: 120px
+  &-slide
+    width: 100%
+  &-slider
+    &-navigations
+      display: flex
+    &-button
+      width: 54px
+      height: 56px
+      border: none
+      box-sizing: border-box
+      // background-color: transparent
+      cursor: pointer
+      padding: 0
+      margin-right: 22px
+      // &:hover
+      //   background-color: rgba(21, 37, 72, 0.1)
+      &--disabled
+        opacity: 0.2
+        cursor: auto
+        background-color: transparent
+      &--prev
+        border-radius: 50%
+
+        &:hover
+          background-color: transparent
+      &--next
+        margin: 0
+        width: 56px
+        // background: url(https://maria-shkurko.ru/ehya/img/button-next.svg)
+        border-radius: 50%
+        &--disabled
+          width: 56px
+          // background: url(https://maria-shkurko.ru/ehya/img/button-next-disabled.svg)
+          cursor: auto
+          &:hover
+            background-color: transparent
+  &__info
+    width: 392px
+  &__hashtag
+    text-decoration: none
     font-weight: 600
     font-size: 14px
     line-height: 20px
+    text-align: center
+    text-transform: uppercase
     color: #36B37E
     background: rgba(54, 179, 126, 0.1)
     border-radius: 2000px
-    text-transform: uppercase
+    padding: 6px 16px
   &__title
-    font-family: "HKGrotesk"
-    font-style: normal
+    font-family: 'HKGrotesk'
     font-weight: bold
     font-size: 48px
     line-height: 60px
     letter-spacing: 0.2px
     color: #183B56
-    max-width: 337px
     margin-top: 28px
-  &__text
-    font-style: normal
+    margin-bottom: 24px
+  &__subtitle
     font-weight: normal
     font-size: 20px
     line-height: 36px
     color: #5A7184
-    max-width: 392px
-    margin-bottom: 42px
-  &__image
-    width: 312px
-    height: 317px
-    object-fit: cover
-    border-radius: 8px 8px 0px 0px
-  &__right-side
-    position: relative
-    display: flex
-    justify-content: space-between
-    max-width: 662px
+    margin-bottom: 48px
+  &__items
+    width: 662px
+  &-swiper
+    width: 100%
+    &-slide
+      width: 100%
   &-slider
-    &__item
-      max-height: 475px
-
-    &__text-wrapper
+    &_img
+      position: relative
+      border-radius: 8px 8px 0px 0px
+      object-fit: cover
+      overflow: hidden
+    &_item
       display: flex
-      flex-direction: column
+      justify-content: space-between
+    &_info
       background-color: #FAFDFF
-      min-height: 178px
-      max-width: 312px
-      padding: 20px
-      position: absolute
-      z-index: 25
-      transform: translate(13px, -24px)
-
-    &__description
-      font-family: "HKGrotesk"
-      font-style: normal
-      font-weight: 800
+      position: relative
+      top: -51px
+      right: -19px
+      width: 312px
+      padding-bottom: 20px
+    &_left
+      width: 322px
+      margin-right: 28px
+    &_right
+      width: 322px
+      margin-right: 28px
+    &_title
+      font-family: 'HKGrotesk'
+      font-weight: 500
       font-size: 22px
       line-height: 32px
       letter-spacing: 0.2px
       color: #183B56
-      margin-bottom: 12px
-
-    &__link
-      font-style: normal
+      width: 260px
+      padding-top: 20px
+      padding-left: 26px
+      margin-bottom: 18px
+    &_next
+      text-decoration: none
       font-weight: 600
       font-size: 16px
       line-height: 22px
-      text-decoration: none
+      padding-left: 30px
       color: #1565D8
+.stories
+  &-swiper
+    width: 652px
+    margin: 0

@@ -20,7 +20,7 @@
   .collection-container,
   .trending-container,
   .reviews-container,
-  .greetings-container
+  .greetings-container,
   .newsletter-container,
     max-width: 700px
   .footer-container
@@ -57,6 +57,18 @@
       flex-wrap: wrap
     &__nav
       grid-template-columns: repeat(2, 165px)
+  .modal
+    &__container
+      flex-direction: row-reverse
+      flex-wrap: wrap
+      align-items: center
+    &__button
+      order: 5
+      margin-top: 15px
+    &__dialog
+      padding-left: 50px
+      padding-right: 50px
+
 @media (max-width: 768px)
   body
     padding-top: 94px
@@ -69,6 +81,9 @@
         left: 0
         right: 0
         z-index: 150
+      &--navbar-hidden
+        z-index: 100
+
     &__logo
       &--hidden
         display: none
@@ -173,10 +188,23 @@
     padding-top: 68px
     &__nav
       grid-template-columns: repeat(2, 165px)
+  .modal
+    &__dialog
+      width: 75%
+      padding: 15px 15px
+      overflow-y: auto
+      max-height: 100%
+    &__input
+      font-size: 11px
+    &__message
+      font-size: 11px
+      margin-bottom: 15px
+
 @media (max-width: 716px)
   .footer
     &__nav
       margin-top: 30px
+
 @media (max-width: 576px)
   .hero
     &__list
@@ -231,6 +259,14 @@
     &__form
       width: 100%
       max-width: none
+@media ( max-height: 487px )
+  .modal
+    &__dialog
+      overflow: auto
+      max-height: 100%
+  .mobile
+    overflow: auto
+    max-height: 100%
 @media (max-width: 490px)
   .collection
     &__photo--first
@@ -348,6 +384,12 @@
       align-items: center
     &__text
       text-align: center
+  .modal
+    &__container
+      flex-direction: row
+    &__dialog
+      padding: 25px 25px
+
 @media (max-width: 320px)
   .hero
     &__button

@@ -1,0 +1,82 @@
+.modal
+  &__overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(0, 143, 223, 0.39)
+    z-index: 100
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.5s
+    &--visible
+      visibility: visible
+      opacity: 1
+
+  &__dialog
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    max-width: 478px
+    padding: 33px 88px
+    background-color: #183B56
+    color: #FFFFFF
+    border-radius: 8px
+    z-index: 200
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.5s
+    &--visible
+      visibility: visible
+      opacity: 1
+
+  &__close
+    position: absolute
+    right: 18px
+    top: 17px
+    text-decoration: none
+    cursor: pointer
+    background-color: #E5EAF4
+  &__icon
+    width: 20px
+  &__input
+    width: 100%
+    margin-top: 15px
+    font-size: 13px
+    outline: none
+    padding: 0 10px
+  &__message
+    width: 100%
+    min-height: 123px
+    margin-top: 15px
+    font-size: 13px
+    outline: none
+    padding: 0 10px
+  &__button
+    margin-top: 15px
+    background-color: #E5EAF4
+    padding: 5px
+  &__info
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-basis: 100%
+  &__title
+    font-family: "HKGrotesk"
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 15px
+  &__button
+    margin-bottom: 10px

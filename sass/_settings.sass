@@ -71,9 +71,35 @@ hr
 
 .invalid
   position: relative
-  color: #EC1F46
-  border-bottom: 1px solid #EC1F46
+  color: #E5EAF4
+  border-bottom: 1px solid #E5EAF4
   font-size: 13px
 
 #sub_mail-error
   bottom: -60px
+
+@media (min-width: 992px)
+  button
+    transition: 0.4s
+    &:hover
+      box-shadow: 0 0 12px  #1565D8
+      color: #1565D8
+      cursor: pointer
+  a
+    transition: 0.4s
+    &:hover
+      color: #1565D8
+
+button
+  padding: 12px 23px
+  font-style: normal
+  font-weight: bold
+  font-size: 16px
+  line-height: 22px
+  color: #1565D8
+  background-color: inherit
+  border-radius: 8px
+  border: 2px solid #1565D8
+  outline: none
+  cursor: pointer
+  white-space: nowrap
