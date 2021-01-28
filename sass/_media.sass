@@ -2,7 +2,7 @@
   .container,
   .collection-container,
   .trending-container,
-  .stories-container,
+  .stories__container,
   .newsletter-container,
   .footer-container,
   .greetings-container
@@ -11,10 +11,10 @@
     &-container
       max-width: 1200px
       padding-left: 45px
-  .trending
-    &__photos-wrapper
-      justify-content: space-evenly
 
+  .swiper
+    &-container
+      width: 850px
 @media (max-width: 992px)
   .container,
   .collection-container,
@@ -25,7 +25,7 @@
     max-width: 700px
   .footer-container
     max-width: 700px
-  .stories-container
+  .stories__container,
     max-width: 95%
   .hero
     &-container
@@ -46,6 +46,31 @@
       margin-bottom: 25px
     &__text
       max-width: 672px
+  .swiper
+    &-container
+      width: 660px
+      margin: auto
+  .stories
+
+    &-wrapper
+      display: block
+      padding-top: 88px
+    &__info
+      width: 100%
+      text-align: center
+      margin-bottom: 36px
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__title
+      margin-bottom: 16px
+      margin-top: 24px
+    &__subtitle
+      width: 568px
+      margin: auto
+      margin-bottom: 36px
+    &__items
+      margin: auto
   .newsletter
     &-wrapper
       flex-direction: column
@@ -69,6 +94,65 @@
       padding-left: 50px
       padding-right: 50px
 
+@media  ( max-width: 690px )
+  .stories
+    &__container
+      max-width: 90%
+    &__items
+      width: 73%
+    &__subtitle
+      width: 100%
+    &-slider
+      &_left
+        width: 280px
+        margin: 0
+        margin-bottom: 10px
+      &_right
+        width: 280px
+        margin: 0
+      &_info
+        width: 270px
+      &_title
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 16px
+      &_next
+        font-weight: 600
+        font-size: 16px
+        line-height: 22px
+      &_img
+        width: 270px
+      &_item
+        display: flex
+        flex-direction: column
+        align-items: center
+  .swiper
+    &-container
+      width: 100%
+  .stories
+    &-slider
+      &_info
+        top: -18px
+      &_title
+        width: 266px
+        padding-left: 22px
+    &-wrapper
+      padding-top: 40px
+    &__info
+      margin-bottom: 18px
+    &__title
+      font-weight: bold
+      font-size: 28px
+      line-height: 36px
+      &_visible
+        display: none
+    &__subtitle
+      font-size: 16px
+      line-height: 28px
+    &__button
+      width: 48px
+
 @media (max-width: 768px)
   body
     padding-top: 94px
@@ -83,14 +167,16 @@
         z-index: 150
       &--navbar-hidden
         z-index: 100
-
     &__logo
       &--hidden
         display: none
   .container
     max-width: 85%
   .collection
-    padding-bottom: 43px
+    padding-top: 75px
+    &-container
+      max-width: 87%
+  .hero
     &-container
       max-width: 87%
   .reviews
@@ -99,9 +185,11 @@
   .footer
     &-container
       max-width: 87%
-  .greetings-container
-    max-width: 87%
-
+  .greetings
+    &-container
+      max-width: 87%
+  .trending-container
+    max-width: 636px
   .navbar
     display: none
     position: fixed
@@ -144,6 +232,7 @@
       max-width: 95%
       padding-left: 20px
       padding-top: 45px
+      padding-bottom: 26px
     &__title
       font-style: normal
       font-weight: bold
@@ -156,14 +245,18 @@
       font-size: 18px
       line-height: 32px
       max-width: 400px
-      margin-bottom: 36px
+      margin-bottom: 55px
     &__button
       margin-bottom: 35px
   .collection
+    padding-top: 75px
+    padding-bottom: 58px
     &__content
       max-width: 100%
     &__title
       white-space: normal
+    &__text
+      margin-top: 0
   .trending
     padding-top: 19px
     padding-bottom: 39px
@@ -174,6 +267,10 @@
       margin-bottom: 28px
     &__photo
       width: 280px
+    &__photos
+      &-wrapper
+        grid-template-columns: repeat(2, 1fr)
+        grid-row-gap: 0px
   .reviews-slider
     &__item
       padding-bottom: 40px
@@ -182,10 +279,15 @@
       max-height: 205px
       margin-bottom: 33px
   .newsletter
+    padding-top: 41px
+    padding-bottom: 75px
     &__title
       margin-bottom: 14px
+    &__text
+      margin-bottom: 28px
   .footer
     padding-top: 68px
+    padding-left: 12px
     &__nav
       grid-template-columns: repeat(2, 165px)
   .modal
@@ -199,6 +301,10 @@
     &__message
       font-size: 11px
       margin-bottom: 15px
+  .stories
+    padding-bottom: 58px
+    &-wrapper
+      padding-top: 78px
 
 @media (max-width: 716px)
   .footer
@@ -241,8 +347,10 @@
       &-wrapper
         justify-content: flex-start
     &__photos
-      &-item--last
-        padding-top: 41px
+      &-item
+        margin-bottom: 20px
+        &--last
+          padding-top: 41px
     &__last-item
       &--description
         font-size: 17px
@@ -298,7 +406,17 @@
       margin-right: 14px
   .trending
     &-container
-      max-width: 100%
+      max-width: 92%
+  .stories
+    &-wrapper
+      padding-top: 35px
+    &-slider
+      &_left
+        width: 272px
+        margin-right: 0
+      &_right
+        width: 272px
+        margin-right: 0
 @media (max-width: 390px)
   .header
     padding-top: 18px
@@ -389,12 +507,30 @@
       flex-direction: row
     &__dialog
       padding: 25px 25px
-
+  .stories
+    margin-bottom: 45px
+    &__title
+      margin-top: 19px
+    &-slider
+      &-button
+        width: 48px
+        height: 48px
 @media (max-width: 320px)
   .hero
     &__button
       margin-bottom: 16px
+    &__list
+      margin-top: 44px
+    &__description
+      margin-top: -6px
+      margin-bottom: 29px
+      display: inline-block
+    &__title
+      margin-top: 29px
+    &__link
+      padding: 9px 42px
   .collection
+    padding-bottom: 50px
     &-container
       max-width: 100%
   .trending
@@ -406,19 +542,21 @@
       margin-right: 27px
     &__photos
       &-title
-        margin: 0
-        margin-top: 13px
+        margin-top: 7px
+        margin-left: 0
       &-item
         margin-bottom: 21px
     &__shopping-icon
       width: 14px
       height: 32px
     &__photos
+      &-wrapper
+        grid-row-gap: 0px
+        grid-column-gap: 0px
       &-item
         &--last
           padding-top: 41px
-        &--empty
-          flex-basis: 44%
+
     &__last-item
       &--description
         font-size: 17px
@@ -426,5 +564,46 @@
     &__last-logo
       width: 25px
       margin-bottom: 16px
+    &__price
+      display: inline-block
+      margin-top: -4px
+      &-wrapper
+        margin-left: 0
+  .stories
+    padding-bottom: 0px
+    &-wrapper
+      padding-top: 21px
+    &-slider_img
+      height: 277px
+  .newsletter
+    padding-bottom: 113px
+    &__description
+      font-size: 16px
+      line-height: 28px
+    &__text
+      margin-bottom: 0px
+    &__form
+      margin-top: 9px
+      height: 49px
+    &__button
+      margin-top: 55px
   .footer
     padding-left: 15px
+    padding-top: 26px
+    &__nav
+      grid-gap: 15px
+    &__title
+      font-size: 16px
+      line-height: 22px
+      margin: 0
+      margin-bottom: 15px
+    &__link
+      font-size: 14px
+      line-height: 20px
+    &__menu-li
+      margin-bottom: 16px
+    &__text
+      margin: 0
+      margin-bottom: 17px
+    &__logo-link
+      margin-bottom: 10px

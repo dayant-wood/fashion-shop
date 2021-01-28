@@ -13,14 +13,18 @@ $(document).ready(function () {
 //tabs 
 var linkItem = $(".trending__item");
 var contentItem = $(".trending__photos-wrapper"); 
-var colorItem = $(".trending__link");
+
   linkItem.on("click", function(event){
     event.preventDefault();
     var activeContent= $(this).attr("data-target");
     contentItem.removeClass('trending__photos-wrapper--active');
+    linkItem.removeClass("trends__menu-item--active");
+    $(".trending__item").removeClass("trending__item--active");
     $(activeContent).toggleClass('trending__photos-wrapper--active');
-    // colorItem.removeClass('primary-link');
-    // colorItem.toggleClass('primary-link');
+    
+    
+    
+    
     
   });
 
@@ -75,7 +79,7 @@ $(".reviews-container").hover(
   }
 );
 
-var mySwiper = new Swiper('.stories-swiper', {
+var storiesSwiper = new Swiper('.stories-swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
@@ -86,7 +90,7 @@ var mySwiper = new Swiper('.stories-swiper', {
     prevEl: '.stories-slider-button--prev', 
     disabledClass: 'stories-slider-button--disabled',
   },
-})
+});
 
 $('#slide').click(storiesSwiper, function(event){
   event.preventDefault();
