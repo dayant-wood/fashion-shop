@@ -13,21 +13,31 @@ $(document).ready(function () {
 //tabs 
 var linkItem = $(".trending__item");
 var contentItem = $(".trending__photos-wrapper"); 
+var linkChangeColour= $(".trending__link");
 
   linkItem.on("click", function(event){
     event.preventDefault();
     var activeContent= $(this).attr("data-target");
-    contentItem.removeClass('trending__photos-wrapper--active');
-    linkItem.removeClass("trends__menu-item--active");
-    $(".trending__item").removeClass("trending__item--active");
-    $(activeContent).toggleClass('trending__photos-wrapper--active');
-    
-    
-    
-    
-    
-  });
+    contentItem.removeClass("trending__photos-wrapper--active");
+    linkItem.removeClass("trending__item--active");
+    $(this).addClass("trending__item--active");
+    $(activeContent).addClass("trending__photos-wrapper--active");
+   
+});
 
+
+// $(document).ready(function () {
+//   var trendingLink = $(".trending__link");
+//   var cardWrapper = $(".card-wrapper");
+
+//   trendingLink.on('click', function (event) {
+//     var activeWrapper = $(this).attr("data-target");
+//     trendingLink.removeClass("trending__link_active");
+//     cardWrapper.removeClass("card-wrapper__active");
+//     $(activeWrapper).addClass("card-wrapper__active");
+//     $(this).addClass("trending__link_active");
+//   });
+// });  
 
 //open mobile-menu  
 var menuButton = $(".menu-button");

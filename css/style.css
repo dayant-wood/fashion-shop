@@ -860,6 +860,10 @@ template {
   cursor: pointer;
 }
 
+.trending__link--active {
+  color: #183B56;
+}
+
 .trending__photo {
   width: 260px;
   height: 350px;
@@ -1910,6 +1914,12 @@ template {
   }
 }
 
+@media (max-width: 768px) {
+  .trending__photos-wrapper {
+    grid-column-gap: 0px;
+  }
+}
+
 @media (max-width: 576px) {
   .hero__list {
     flex-wrap: wrap;
@@ -1962,6 +1972,7 @@ template {
   .trending__last-item--description {
     font-size: 17px;
     line-height: 20px;
+    padding-top: 0;
   }
   .trending__last-logo {
     width: 25px;
@@ -2251,7 +2262,7 @@ template {
     margin-bottom: 0px;
   }
   .newsletter__form {
-    margin-top: 9px;
+    margin-top: 34px;
     height: 49px;
   }
   .newsletter__button {
