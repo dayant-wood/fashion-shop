@@ -6,6 +6,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-feature-settings: "locl" 0;
   background: #FFFFFF;
+  position: relative;
 }
 
 .container {
@@ -63,10 +64,6 @@ img {
   height: 5px;
 }
 
-.trending__link--active {
-  color: #183B56;
-}
-
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin-right: 11px;
 }
@@ -82,8 +79,15 @@ hr {
 
 .invalid {
   position: relative;
-  color: #E5EAF4;
-  border-bottom: 1px solid #E5EAF4;
+  color: #183B56;
+  border-bottom: 1px solid #183B56;
+  font-size: 13px;
+}
+
+.error {
+  position: relative;
+  color: #fffccc;
+  border-bottom: 1px solid #fffccc;
   font-size: 13px;
 }
 
@@ -100,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.4s;
   }
   button:hover {
-    box-shadow: 0 0 12px  #1565D8;
+    box-shadow: 0 0 12px #1565D8;
     color: #1565D8;
     cursor: pointer;
   }
@@ -109,6 +113,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   a:hover {
     color: #1565D8;
+  }
+  .trending__last-item--description:hover {
+    color: #fffccc;
   }
 }
 
@@ -125,6 +132,17 @@ button {
   outline: none;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+}
+
+.to-top__image {
+  transform: rotate(-90deg);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1069,6 +1087,7 @@ template {
   height: 56px;
   border: none;
   box-sizing: border-box;
+  outline: none;
   cursor: pointer;
   padding: 0;
   margin-right: 22px;
@@ -1076,16 +1095,12 @@ template {
 
 .stories-slider-button--disabled {
   opacity: 0.2;
-  cursor: auto;
-  background-color: transparent;
+  cursor: pointer;
 }
 
 .stories-slider-button--prev {
+  border: none;
   border-radius: 50%;
-}
-
-.stories-slider-button--prev:hover {
-  background-color: transparent;
 }
 
 .stories-slider-button--next {
@@ -1215,25 +1230,6 @@ template {
   position: relative;
   padding: 63px 0 99px 0;
   background-color: #1565D8;
-}
-
-.newsletter:before {
-  content: '';
-  position: absolute;
-  background: url(../img/oval-1.svg) no-repeat left top;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-}
-
-.newsletter:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  background: url(../img/oval-2.svg) no-repeat right top;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
 }
 
 .newsletter-container {
@@ -1454,8 +1450,8 @@ template {
   transform: translate(-50%, -50%);
   max-width: 478px;
   padding: 33px 88px;
-  background-color: #183B56;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #183B56;
   border-radius: 8px;
   z-index: 200;
   visibility: hidden;
@@ -1486,7 +1482,9 @@ template {
   margin-top: 15px;
   font-size: 13px;
   outline: none;
-  padding: 0 10px;
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 4px;
 }
 
 .modal__message {
@@ -1516,7 +1514,6 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-basis: 100%;
 }
 
 .modal__title {
@@ -1531,7 +1528,9 @@ template {
 }
 
 .modal__button {
+  padding: 10px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -1645,6 +1644,9 @@ template {
   .modal__dialog {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .to-top {
+    display: none;
   }
 }
 
@@ -2122,6 +2124,9 @@ template {
   .reviews-slider__author {
     text-align: center;
     max-width: 145px;
+  }
+  .newsletter {
+    padding-bottom: 125px;
   }
   .newsletter__title {
     font-size: 28px;

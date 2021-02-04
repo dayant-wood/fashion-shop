@@ -1,6 +1,5 @@
 .stories
   padding-bottom: 120px
-
   &-wrapper
     display: flex
     justify-content: space-between
@@ -16,29 +15,22 @@
       height: 56px
       border: none
       box-sizing: border-box
-      // background-color: transparent
+      outline: none
       cursor: pointer
       padding: 0
       margin-right: 22px
-      // &:hover
-      //   background-color: rgba(21, 37, 72, 0.1)
       &--disabled
         opacity: 0.2
-        cursor: auto
-        background-color: transparent
+        cursor: pointer
       &--prev
+        border: none
         border-radius: 50%
-
-        &:hover
-          background-color: transparent
       &--next
         margin: 0
         width: 56px
-        // background: url(https://maria-shkurko.ru/ehya/img/button-next.svg)
         border-radius: 50%
         &--disabled
           width: 56px
-          // background: url(https://maria-shkurko.ru/ehya/img/button-next-disabled.svg)
           cursor: auto
           &:hover
             background-color: transparent

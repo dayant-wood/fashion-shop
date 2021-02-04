@@ -26,18 +26,7 @@ var linkChangeColour= $(".trending__link");
 });
 
 
-// $(document).ready(function () {
-//   var trendingLink = $(".trending__link");
-//   var cardWrapper = $(".card-wrapper");
 
-//   trendingLink.on('click', function (event) {
-//     var activeWrapper = $(this).attr("data-target");
-//     trendingLink.removeClass("trending__link_active");
-//     cardWrapper.removeClass("card-wrapper__active");
-//     $(activeWrapper).addClass("card-wrapper__active");
-//     $(this).addClass("trending__link_active");
-//   });
-// });  
 
 //open mobile-menu  
 var menuButton = $(".menu-button");
@@ -61,6 +50,7 @@ var reviewsSwiper = new Swiper('.reviews-container', {
   // Optional parameters
   
   loop: true,
+  
 
   // autoplay: {
   //   delay: 7000,
@@ -71,6 +61,7 @@ var reviewsSwiper = new Swiper('.reviews-container', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
  
    keyboard: {
@@ -108,32 +99,38 @@ $('#slide').click(storiesSwiper, function(event){
 });
 
 
-$(".form").each(function() {
+$(".modal__form").each(function() {
     $(this).validate({
     errorClass: "invalid",
     messages: {
     
     name: {
-      required: "Please, specify your name",
-      minlength: "Name should contain minimum 3 characters",
+      required: "Введите логин",
+      minlength: "Имя должно быть не короче 3 символов",
     },
-    email: {
-      required: "We need your email address to contact you",
-      email: "Your email address must be in the format of name@domain.com",
+    
+    password: {
+      required: "Введите пароль",
     },
-    phone: {
-      required: "Please, specify your phone number",
-      minlength: "Please, enter the full number",
-    },
+  },
+      
+});
+});
 
+$(".newsletter__form").each(function() {
+    $(this).validate({
+    errorClass: "error",
+    messages: {
+           
     sub_mail: {
-      required: "We need your email address to contact you",
-      email: "Your email address must be in the format of name@domain.com",
+      required: "Введите e-mail",
+      email: "Ваш e-mail должен быть в формате name@domain.com",
     }, 
   },
       
 });
 });
+
 
 //modal window
 var modalButton = $("[data-toggle=modal]");

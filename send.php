@@ -5,25 +5,28 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
+$name = $_POST['name'];
+$password = $_POST['password'];
 $sub_mail = $_POST['sub_mail'];
 
 
-// // Формирование самого письма
-// $title = "Новая подписка";
-// $body = "
-// <h2>Новая подписка</h2>
-// <b>Имя:</b> $name<br>
-// <b>Phone:</b> $phone<br><br>
-// <b>Message:</b><br>$message
-// ";
+
+// Формирование входа в личный кабинет
+$title = "Вход в личный кабинет";
+$body = "
+<h2>Вход в личный кабинет</h2>
+<b>Логин:</b> $name<br>
+<b>Password:</b> $password<br>
+";
 
 // Формирование письма на подписку
-  $title = "Подписка на Fashion Shop";
-  $body = "
+if ($sub_mail) {
+    $title = "Подписка на Fashion Shop";
+    $body = "
     <h2>Подписка на рассылку</h2>
     <b>e-mail:</b> $sub_mail<br>
   ";
-
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -73,6 +76,6 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-// // Отображение результата
-// header('Location: thankyou.html');
+// Отображение результата
+header('Location: thankyou.html');
 

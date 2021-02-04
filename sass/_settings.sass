@@ -5,6 +5,7 @@ body
   font-family: "Open Sans", sans-serif
   font-feature-settings: "locl" 0
   background: #FFFFFF
+  position: relative
 
 .container
   max-width: 1140px
@@ -56,9 +57,6 @@ img
   width: 5px
   height: 5px
 
-.trending__link--active
-  color: #183B56
-
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
   margin-right: 11px
 
@@ -71,8 +69,14 @@ hr
 
 .invalid
   position: relative
-  color: #E5EAF4
-  border-bottom: 1px solid #E5EAF4
+  color: #183B56
+  border-bottom: 1px solid #183B56
+  font-size: 13px
+
+.error
+  position: relative
+  color: #fffccc
+  border-bottom: 1px solid #fffccc
   font-size: 13px
 
 #sub_mail-error
@@ -85,13 +89,16 @@ h1,h2,h3,h4,h5,h6
   button
     transition: 0.4s
     &:hover
-      box-shadow: 0 0 12px  #1565D8
+      box-shadow: 0 0 12px #1565D8
       color: #1565D8
       cursor: pointer
   a
     transition: 0.4s
     &:hover
       color: #1565D8
+  .trending__last-item--description
+    &:hover
+      color: #fffccc
 
 button
   padding: 12px 23px
@@ -106,3 +113,11 @@ button
   outline: none
   cursor: pointer
   white-space: nowrap
+
+.to-top
+  position: fixed
+  right: 20px
+  bottom: 20px
+  z-index: 200
+  &__image
+    transform: rotate(-90deg)
